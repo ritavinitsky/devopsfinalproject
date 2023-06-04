@@ -5,7 +5,7 @@ const app = express()
 
 app.get('/', (req, res) => {
     console.log("Server Started!")
-    res.send('Hello neta')
+    res.sendFile(`${__dirname}/register.html`)
 }
 )
 
