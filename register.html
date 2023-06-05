@@ -61,6 +61,16 @@
             var grade1 = document.getElementById("grade1").value;
             var grade2 = document.getElementById("grade2").value;
             var grade3 = document.getElementById("grade3").value;
+
+            if (!/^[A-Za-z]+$/.test(username)) {
+                alert("Username must contain only English letters.");
+                return;
+            }
+            
+            if (grade1 < 0 || grade1 > 100 || grade2 < 0 || grade2 > 100 || grade3 < 0 || grade3 > 100) {
+                alert("Grades must be between 0 and 100.");
+                return;
+            }
             
             var data = {
                 username: username,
